@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description"
+        content="request a service by me like : Designing ,Websites and Web Applications Developement">
+    <meta name="keywords" content="Asma,portfolio,Web Developer,HTML, CSS, JavaScript,Designing">
+    <meta name="author" content="Asma Sabbah">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Call My Service</title>
+</head>
+
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th></th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <img src="./Assets/images/sidebar.jpg" height="1000px" width="200px">
+                </td>
+                <td>
+                    <a href="Home.html"><img src="./Assets/images/home.png" width="30px"></a>
+                    <h1>Call My Service</h1>
+
+                    <form method="post" action="Thankyou.html">
+                        <div>
+                            <h3>Choose the service*</h3>
+                            <input type="radio" name="service" required>
+                            <label>Designing</label>
+                            <input type="radio" name="service">
+                            <label>Production</label>
+                        </div>
+
+                        <div>
+                            <h3>Your Name*</h3>
+                            <input type="text" name="Fname" id="Fname" size="30" placeholder="First Name" required>
+                            &nbsp;&nbsp;
+                            <input type="text" name="Lname" id="Lname" size="30" placeholder="Last Name" required>
+                        </div>
+
+                        <div>
+                            <h3>Email*</h3>
+                            <input type="email" name="Email" id="Email" size="65" placeholder="Email" required>
+                        </div>
+
+                        <div>
+                            <h3>Description</h3>
+                            <h6>max: (100 char)</h6>
+                            <textarea rows="7" cols="53" placeholder="Description" maxlength="100"></textarea>
+                        </div>
+
+                        <div>
+                            <h3>Please if you have files related to your request upload it here:</h3>
+                            <input type="file" id="myFile" name="filename" multiple>
+                        </div>
+
+                        <div>
+                            <h3>Payment Method*</h3>
+                            <select required>
+                                <option selected="selected" value="01">Paypal</option>
+                                <option value="02">Visa</option>
+                                <option value="03">Cliq</option>
+                                <option value="04">Zain Cash</option>
+                                <option value="05">Bank Transfer</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <h3>Available Days for Contact</h3>
+                            <input type="checkbox" name="sunday">
+                            <label>Sunday</label><br>
+                            <input type="checkbox" name="monday">
+                            <label>Monday</label><br>
+                            <input type="checkbox" name="friday">
+                            <label>Friday</label>
+                        </div>
+
+                        <div>
+                            <input type="submit" name="submitBtn" value="Submit">
+                            <input type="reset" name="resetBtn" value="Reset">
+                        </div>
+
+                    </form>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+</html>
