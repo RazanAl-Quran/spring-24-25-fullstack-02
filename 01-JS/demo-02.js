@@ -89,13 +89,55 @@ const add2 = function (a, b) {
 add2(6,8);
 
 
+
 // 3- arrow functions
-const add3 = (a,b) =>  a+b;
+const add3 = (a,b) => {
+    console.log('welcome');
+    return a+b;
+}
 console.log(add3(4,9));
 
+const add4 = (a,b) =>  a+b;
+console.log(add4(4,9));
 
 
+const user1 = {
+    name: "Alice",
+    greet: function () {
+        console.log(this);
+        console.log(`Hello, ${this.name}`);
+    },
+};
+user1.greet();
+
+// Window
+const user2 = {
+    name: "Alice",
+    greet: () => {
+        console.log(this);
+        console.log(`Hello, ${this.name}`);
+    },
+};
+user2.greet();
 
 
+const user3 = {
+    name: "Alice",
+    greet: function () {
+        const inner = () => {
+            console.log(this);
+            console.log(`Hello, ${this.name}`);
+        }
+        inner();
+    }
+};
+user3.greet();
 
+// When to Use Arrow Functions?
+// ✔ Good for:
+// ✅ When you need this to refer to the surrounding scope (e.g., inside object methods, event handlers, callbacks).
 
+// ❌ Avoid in:
+// ❌ Object methods (unless nested inside a normal function).
+// ❌ Event listeners if you need this to refer to the element.
+  
