@@ -55,8 +55,12 @@ function step3() {
     }, 1000);
 }
 
+console.log('jj');
+
 step1(() => {
     step2(() => {
         step3();
     });
 });
+
+console.log('jj2');
