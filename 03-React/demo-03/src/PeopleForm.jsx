@@ -1,13 +1,13 @@
 import { useState } from "react";
 
-function People() {
+function PeopleForm(props) {
 
     const [username, setUsername] = useState('');
     const [height, setHeight] = useState("");
     const [favoritePet, setFavoritePet] = useState("");
     const [gender, setGender] = useState("");
 
-    const [people, setPeople] = useState([]);
+   
 
     const addPersonHandler = (e) => {
         e.preventDefault();
@@ -19,17 +19,8 @@ function People() {
         };
         // Object Property Value Shorthand
 
-        // const newPerson = {
-        //     username:username,
-        //     height:height,
-        //     favoritePet:favoritePet,
-        //     gender:gender
-        // };
+        props.addPerson(newPerson);
 
-        // setPeople(people.push(newPerson));
-        setPeople([...people, newPerson]);
-
-        console.log(people);
 
 
 
@@ -81,26 +72,11 @@ function People() {
                 </button>
             </form>
 
-            {/* render people state */}
-            <ul style={{ marginTop: "20px", listStyle: "none", padding: 0 }}>
-                {people.map((person, index) => {
-                    const emoji = person.gender === "Male" ? "👨" : "👩";
-                    return (
-                        <li >
-                            {emoji} <strong>{person.username}</strong> — Height: {person.height}, Favorite Pet: {person.favoritePet}
-                        </li>
-                    );
-                })}
-            </ul>
-
-        <ul>
-            <li></li>
-            <li></li>
-            <li></li>
-        </ul>
+  
+    
         </div>
 
     );
 }
 
-export default People;
+export default PeopleForm;
